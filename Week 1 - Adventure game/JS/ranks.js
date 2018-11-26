@@ -1,0 +1,1 @@
+var ranks = ['farmer', 'merchant', 'knight', 'commander', 'king'];

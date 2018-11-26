@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adventure Game - Week 1</title>
+	<link rel="stylesheet" type="text/css" href="css/adventure_game.css">
+</head>
+<body>
+	<div id="container">
+		<div id="game">
+			<div id="alignstart">
+				<button id="startgame" onclick="startbutton()"> Start </button>
+			</div>
+		</div>
+		<div id="menu">
+			<div id="buttons">
+				<button id="links" onclick="buttonleft()"> Left </button>
+				<button id="rechts" onclick="buttonright()"> Right </button>
+				<button id="terug" onclick="buttonback()"> Back </button>
+			</div>
+			<div>
+				<p>Current rank: </p></p><p id="rank">test</p>
+			</div>
+		</div>
+		<div id="dialogues">
+			<p id="text">test</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="JS/buttons.js"></script>
+	<script type="text/javascript" src="JS/inventory.js"></script>
+	<script type="text/javascript" src="JS/levels.js"></script>
+	<script type="text/javascript" src="JS/main.js"></script>
+	<script type="text/javascript" src="JS/dialogues.js"></script>
+</body>
+</html>
