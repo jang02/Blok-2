@@ -7,28 +7,30 @@
 <body>
 	<div id="container">
 		<div id="game">
-			<div id="alignstart">
-				<button id="startgame" onclick="startbutton()"> Start </button>
-			</div>
+
 		</div>
 		<div id="menu">
 			<div id="buttons">
-				<button id="links" onclick="buttonleft()"> Left </button>
-				<button id="rechts" onclick="buttonright()"> Right </button>
-				<button id="terug" onclick="buttonback()"> Back </button>
+				<button class="direction" id="links" onclick="buttonleft()"> Left </button>
+				<button class="direction" id="rechts" onclick="buttonright()"> Right </button>
+				<button class="direction" id="terug" onclick="buttonback()"> Back </button>
 			</div>
 			<div>
-				<p>Current rank: </p></p><p id="rank">test</p>
+				<p>Current rank: </p><p id="rank"></p>
 			</div>
 		</div>
 		<div id="dialogues">
-			<p id="text">test</p>
+			<p id="text"></p>
+		</div>
+		<div id="inventory">
+			
 		</div>
 	</div>
-	<script type="text/javascript" src="JS/buttons.js"></script>
 	<script type="text/javascript" src="JS/inventory.js"></script>
 	<script type="text/javascript" src="JS/levels.js"></script>
 	<script type="text/javascript" src="JS/main.js"></script>
 	<script type="text/javascript" src="JS/dialogues.js"></script>
+	<script type="text/javascript" src="JS/ranks.js"></script>
+	<script type="text/javascript" src="JS/enemies.js"></script>
 </body>
 </html>
