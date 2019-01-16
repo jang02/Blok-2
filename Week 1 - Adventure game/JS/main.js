@@ -7,7 +7,7 @@ var buttons;
 
 (buttonleft = document.getElementById('links'));
 (buttonright = document.getElementById('rechts'));
-(buttonback = document.getElementById('terug'));
+(backbutton = document.getElementById('terug'));
 (buttons = document.getElementById('buttons'));
 
 
@@ -58,24 +58,34 @@ function skip_intro() {
 function buttonloader(left,right,back) {
 	buttonleft.style.display = "none";
 	buttonright.style.display = "none";
-	buttonback.style.display = "none";
+	backbutton.style.display = "none";
 
-	if (left == "flex") {
+	if (left === "flex") {
 		buttonleft.style.display = "flex";
 	}
-	if (right == "flex") {
+	if (right === "flex") {
 		buttonright.style.display = "flex";
 	}
-	if (back == "flex") {
-		buttonback.style.display = "flex";
+	if (back === "flex") {
+		backbutton.style.display = "flex";
+		
 	}
+	console.log("back = " + back);
 }
 
 function createcredits() {
 	var credits = document.createElement('BUTTON');
-	credits.id = "startbutton";
+	credits.id = "credits";
+	credits.classList.add('customButton');
 	document.getElementById("buttons").appendChild(credits);
 
-	document.getElementById('startbutton').innerHTML = 'Credits';
-	document.getElementById('startbutton').onclick = empty;
+	document.getElementById('credits').innerHTML = 'Credits';
+	document.getElementById('credits').onclick = playCredits;
+
+}
+
+function resetButtons() {
+    while (document.getElementsByClassName("customButton").length > 0) {
+        document.getElementsByClassName("customButton")[0].remove();
+    }
 }

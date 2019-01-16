@@ -1,7 +1,8 @@
 function reset() {
 	document.getElementById('game').innerHTML = "";
-	console.log('reset screen.')
+	console.log('reset screen.');
 	document.getElementById('rank').innerHTML= currentrank.name;
+	resetButtons();
 }
 
 function startscreen() {
@@ -9,6 +10,7 @@ function startscreen() {
 
 	var start = document.createElement('BUTTON');
 	start.id = "startbutton";
+	start.classList.add('customButton');
 	document.getElementById("buttons").appendChild(start);
 	console.log('made startbutton');
 
@@ -19,7 +21,6 @@ function startscreen() {
 function farm() {
 	reset();
 	document.getElementById("game").style.backgroundImage = 'url(pictures/farm.jpg)';
-	document.getElementById("startbutton").style.display = 'none';
 	buttonloader("flex","flex","none");
 	
 	if (!inventory["scythe"]) {	
@@ -27,7 +28,7 @@ function farm() {
 		document.getElementById('scythe').onclick = click_scythe;
 	}
 
-	if (dialogues["dialogue1"] == true) {
+	if (dialogues["dialogue1"]) {
 		dialogue2();
 	}
 	else {
@@ -49,15 +50,15 @@ function levelwar() {
 	}
 	else{
 		reset();
-		document.getElementById("game").style.backgroundImage = 'url(pictures/desert.png)'
-		if (dialogues["towar"] == false){ 
+		document.getElementById("game").style.backgroundImage = 'url(pictures/desert.png)';
+		if (!dialogues["towar"]){
 			dialogue10();
 		}
 		else{
 			dialogue14();
 		}
 		
-		buttonback.onclick = farm;
+		backbutton.onclick = farm;
 		buttonright.onclick = war;
 		buttonloader("none","flex","flex");
 	}
@@ -66,30 +67,38 @@ function levelwar() {
 
 function war() {
 	reset();
-	document.getElementById("game").style.backgroundImage = 'url(pictures/war.jpg)'
-	buttonback.onclick = levelwar;
+	document.getElementById("game").style.backgroundImage = 'url(pictures/war.jpg)';
+	backbutton.onclick = levelwar;
 	buttonloader("none","none","flex");
 
 	emptydialogue();
 
-	var defensive = document.createElement('BUTTON');
-	defensive.id = "defend";
-	document.getElementById("buttons").appendChild(defensive);
-	console.log('made startbutton');
+	if (currentrank.id <= 2) {
+		var defensive = document.createElement('BUTTON');
+		defensive.id = "defend";
+		document.getElementById("buttons").appendChild(defensive);
+		console.log('made startbutton');
+		defensive.classList.add('customButton');
 
-	document.getElementById('defend').innerHTML = 'Fight Defensive';
-	document.getElementById('defend').onclick = dialogue11;
+		document.getElementById('defend').innerHTML = 'Fight Defensive';
+		document.getElementById('defend').onclick = dialogue11;
 
-	var aggro = document.createElement('BUTTON');
-	aggro.id = "aggro";
-	document.getElementById("buttons").appendChild(aggro);
-	console.log('made startbutton');
+		var aggro = document.createElement('BUTTON');
+		aggro.id = "aggro";
+		document.getElementById("buttons").appendChild(aggro);
+		console.log('made startbutton');
+		aggro.classList.add('customButton');
 
-	document.getElementById('aggro').innerHTML = 'Charge in';
-	document.getElementById('aggro').onclick = dialogue12;
+		document.getElementById('aggro').innerHTML = 'Charge in';
+		document.getElementById('aggro').onclick = dialogue12;
 
-	document.getElementById('aggro').style.display = "flex";
-	document.getElementById('defend').style.display = "flex";
+		document.getElementById('aggro').style.display = "flex";
+		document.getElementById('defend').style.display = "flex";		
+	}
+
+	if(dialogues["warover"]){
+		warover();
+	}
 }
 
 function SecretInside() {
@@ -98,24 +107,47 @@ function SecretInside() {
 
 	if (!enemies["nick"]) {
 		createNick();
-		document.getElementById("Nick").onclick = farm;
+
+		// load battle scripts
+        var scripts = [
+            "easter_egg/code/Battle.js",
+            "easter_egg/code/Boss.js",
+            "easter_egg/code/enemy.js",
+            "easter_egg/code/utils.js",
+
+            "easter_egg/code/bullet/bullet.js",
+        ];
+
+        document.head.innerHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"easter_egg/code/battle.css\">";
+
+        for (let i = 0; i < scripts.length; i++) {
+            let scriptSrc = scripts[i];
+
+            let script = document.createElement('script');
+            script.src = scriptSrc;
+            document.body.appendChild(script);
+        }
+
+		document.getElementById("Nick").onclick = function () {
+			startBattle();
+        };
 	}
+	buttonloader("none","none","flex");
+	backbutton.style.display = "flex";
+	backbutton.onclick = farm;
 	
 	secretdialogue();
-
-	buttonback.onclick = farm;
-	buttonloader("none","none","flex");
 }
 
 function castleforest() {
 	reset();
 	document.getElementById('game').style.backgroundImage = 'url(pictures/castle.jpg)';
-	buttonback.onclick = farm;
+	backbutton.onclick = farm;
 	buttonleft.onclick = castleinside;
 	buttonright.onclick = forest;
 	buttonloader("flex","flex","flex");
 
-	if (dialogues["dialogue3"] == true) {
+	if (dialogues["dialogue3"]) {
 		dialogue4();
 	}
 	else {
@@ -125,7 +157,7 @@ function castleforest() {
 }
 
 function castleinside() {
-	if (currentrank.id == 0) {
+	if (currentrank.id === 0) {
 		alert("You have to be atleast a Merchant to enter the castle!");
 		castleforest();
 		console.log('sent back to castle forest')
@@ -133,12 +165,12 @@ function castleinside() {
 	else {
 		reset();
 		document.getElementById('game').style.backgroundImage = 'url(pictures/inside_castle.jpg)';
-		buttonback.onclick = castleforest;
+		backbutton.onclick = castleforest;
 		buttonleft.onclick = castleplaza;
 
-		buttonloader("flex","none","flex")
+		buttonloader("flex","none","flex");
 
-		if (dialogues["dialogue3"] == true) {
+		if (dialogues["dialogue3"]) {
 			dialogue5();
 		}
 		else {
@@ -151,21 +183,22 @@ function castleplaza() {
 	reset();
 
 	document.getElementById('game').style.backgroundImage = 'url(pictures/castleplaza.jpg)';
-	buttonback.onclick = castleinside;
+	backbutton.onclick = castleinside;
 	buttonleft.onclick = throneroom;
 
 	buttonloader("flex","none","flex");
 
-	if (dialogues['kingdialogue'] == false) {
+	if (!dialogues['kingdialogue']) {
 		var king = document.createElement('BUTTON');
 		king.id = "kingdialogue";
+		king.classList.add('customButton');
 		document.getElementById("buttons").appendChild(king);
 		document.getElementById('kingdialogue').innerHTML = 'Put bear head for sale.';
 		document.getElementById('kingdialogue').onclick = kingdialogue;
 		document.getElementById('kingdialogue').style.display = "flex";
 	}
 	
-	if(dialogues["market"] == false){
+	if(!dialogues["market"]){
 		dialogue9();
 	}
 	else{
@@ -177,7 +210,7 @@ function castleplaza() {
 function forest() {
 	reset();
 	document.getElementById('game').style.backgroundImage = 'url(pictures/forest.jpg)';
-	buttonback.onclick = castleforest;
+	backbutton.onclick = castleforest;
 	buttonloader("none","none","flex");
 	
 	if (!enemies["bear"]){
@@ -205,8 +238,8 @@ function death() {
 	document.getElementById("game").appendChild(deathmessage)
 	document.getElementById("death").innerHTML = "You died";
 
-	buttonback.onclick = reload;
-	buttonback.innerHTML = "Restart";
+	backbutton.onclick = reload;
+	backbutton.innerHTML = "Restart";
 }
 
 function throneroom() {
@@ -216,11 +249,244 @@ function throneroom() {
 	}
 	else{
 		reset();
+		backbutton.onclick = castleplaza;
+		buttonloader("none","none","flex")
 		document.getElementById('game').style.backgroundImage = 'url(pictures/throneroom.jpg)';	
 		dialogue13();
-		createcrown();
+
+		if(!inventory["crown"]) {
+			createcrown();
+		}
+		
 		createcredits();
+		document.getElementById('credits').style.display = "flex";
 	}
 }
 
 startscreen();
+
+
+
+
+// DONT LOOK AT THIS
+
+function playCredits() {
+	document.getElementById('credits').style.display = "none";
+	buttonloader("none","none","flex");
+
+	backbutton.onclick = reload;
+	backbutton.innerHTML = "Restart";
+
+    document.getElementById("game").style.backgroundImage = "url(easter_egg/images/victory.png)";
+
+    document.getElementById("menu").style.zIndex = "99";
+    document.getElementById("dialogues").style.zIndex = "99";
+    document.getElementById("inventory").style.zIndex = "99";
+
+
+    // fontsize:50%text = font size van 50
+    // "\\" = kleine witregel
+
+    let creditsText = [
+        "fontsize:120%CREDITS", // h1
+        "",
+        "",
+        "",
+        "fontsize:80%Adventure Game", // h2
+        "",
+        "Made by Jan Garretsen",
+        "fontsize:25%\u00A9<i> EpicGodLight</i>",
+        "fontsize:25%<i>This game was made for a school project.</i>",
+        "\\",
+        "fontsize:30%<i>Credits to ImSpooks for the easter egg + credits screen</i>",
+        "",
+        "",
+        "Note: I do not own any images/audio",
+        "in this game.",
+        "",
+        "fontsize:80%Music", // h2
+        "fontsize:25%<i>All of the music used in this game are</i>",
+        "fontsize:25%<i>made by Toby Fox for his game Undertale</i>",
+        "",
+        "",
+        "Credits: Last Goodbye by Toby Fox",
+        "",
+        "",
+        "fontsize:58%Boss Fights", // h3
+        "",
+        "",
+        "Flowey Fight: Your Best Friend by Toby Fox",
+        "\\",
+        "Bear Fight: Bonetrousle by Toby Fox",
+        "\\",
+        "Golem Fight: Bergentrückung",
+        "       & ASGORE by Toby Fox",
+        "\\",
+        "Wizard Fight: Heart Ache by Toby Fox",
+        "\\",
+        "Giant Hawk Fight: Hopes and Dreams",
+        "       & SAVE the World by Toby Fox",
+        "\\",
+        "",
+        "",
+        "",
+        "fontsize:58%Overworld", // h3
+        "",
+        "",
+        "Title Screen: Undertale by Toby Fox",
+        "\\",
+        "Forest Area: Snowy by Toby Fox",
+        "\\",
+        "Village Area: Temmie Village by Toby Fox",
+        "",
+        "",
+        "",
+        "",
+        "fontsize:80%Beta Testers", // h2
+        "",
+        "",
+        "KantSjaak",
+        "\\",
+        "Shadow",
+        "\\",
+        "EnergeticShadow",
+        "\\",
+        "Eyeminer",
+        "\\",
+        "Mr. Fontijn",
+        "\\",
+        "EpicGodLight",
+        "",
+        "",
+        "",
+        "fontsize:80%Special Thanks", // h2
+        "",
+        "Toby Fox, creator of Undertale & Deltarune",
+        "   Because of him, I had the idea to recreate the battle mechanics",
+        "",
+        "",
+        "",
+        "My friends, for making ideas and testing",
+        "",
+        "",
+        "And...",
+        "... YOU, for playing this game :)",
+
+        //empty lines so the last line will stay at a certain position
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "fontsize:80%Thanks for playing!", // h1
+        //empty lines so the last line will stay at a certain position
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ];
+
+    let message = 0;
+
+    let frameCount = 30;
+    let pixelsPerFrame = 1;
+
+    let intervals = [];
+
+    let displayText = function (input){
+        let element = document.createElement("p");
+
+        let text = input;
+        let fontSize = 35;
+
+        if (input.includes("%")) {
+            fontSize = parseInt(input.split("%")[0].replace("fontsize:", ""));
+
+            text = input.split("%")[1];
+        }
+
+        if (input === "\\") {
+            text = "";
+            fontSize = 10 - 3;
+        }
+
+
+        let lineHeight = fontSize + 3;
+
+        element.style.textAlign = "left";
+        element.style.fontSize = fontSize + "px";
+        element.style.lineHeight = lineHeight + "px";
+        element.style.fontFamily = "Determination Mono, Lato, sans-serif";
+        element.style.textShadow = "none";
+        element.innerHTML = text;
+
+        element.style.position = "absolute";
+        //element.style.left = (screenPosition.x + (640 - getTextWidth(text, fontSize, "Determination Mono")) - fontSize) + "px";
+        element.style.top = (screenPosition.y + 750) + "px";
+
+        element.style.left = "50%";
+        element.style.transform = "translateX(-50%)";
+        element.style.msTransform = "translateX(-50%)";
+        element.style.color = "white";
+
+        let interval = setInterval(function () {
+            if (element == null || message >= creditsText.length) {
+                clearInterval(interval);
+            }
+            else {
+                let currentTop = parseInt(element.style.top.replace("px", ""));
+
+                if (currentTop < 0 - lineHeight) {
+                    element.remove();
+                    element = null;
+                }
+                else {
+                    currentTop = currentTop - pixelsPerFrame;
+
+                    element.style.top = currentTop + "px";
+                }
+            }
+
+        }, 1000 / frameCount);
+
+        intervals.push(interval);
+
+        document.getElementById("game").appendChild(element);
+
+        return lineHeight;
+    };
+
+    new Audio("easter_egg/audio/victory.ogg").play();
+
+    let waitFrames = 0;
+
+    let textInterval = setInterval(function () {
+        if (waitFrames-- <= 0) {
+            if (message >= creditsText.length) {
+                clearInterval(textInterval);
+
+                for (let id in intervals) {
+                    clearInterval(id);
+                }
+            }
+            else {
+                waitFrames = displayText(creditsText[message++]);
+            }
+        }
+
+    }, 1000 / frameCount);
+}

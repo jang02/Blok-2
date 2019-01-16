@@ -15,10 +15,9 @@ function create_bear() {
 }
 
 function attack_enemy1() {
-	if (inventory["scythe"] == true) {
+	if (inventory["scythe"]) {
 		enemies["bear"] = true;
 		document.getElementById("bear").style.display = "none";
-		forest;
 		currentrank = Ranks.MERCHANT;
 		beatbear();
 	}

@@ -1,4 +1,6 @@
-var dialogues = {"introduction":false, "dialogue1":false, "dialogue3":false, "dialogue5":false, "kingdialogue":false, "market":false, "towar":false, }
+var dialogues = {"introduction":false, "dialogue1":false, "dialogue3":false, "dialogue5":false, "kingdialogue":false, "market":false, "towar":false, "warover":false}
+
+var skipdialog = 0;
 
 function introduction() {
 	setTimeout(function() {document.getElementById('text').innerHTML= "Welcome player!";}, 1);
@@ -9,7 +11,7 @@ function introduction() {
 	setTimeout(function() {document.getElementById('text').innerHTML= "";}, 22500);
 	dialogues["introduction"] = true;
 
-	setTimeout(function() {document.getElementById("startbutton").style.display = 'flex';}, 22500);
+	setTimeout(function() {document.getElementById("startbutton").style.display = 'flex';}, (22500 * skipdialog));
 }
 
 function beardeathdialogue() {
@@ -27,7 +29,7 @@ function beatbeardialogue() {
 	setTimeout(function() {document.getElementById('text').innerHTML= "And thus the kingdom rewards you with a promotion";}, 3000);
 	setTimeout(function() {document.getElementById('text').innerHTML= "You are now a <b>Merchant<b>!";}, 6000);
 
-	setTimeout(function() {buttons.style.display = 'flex';}, 6000);
+	setTimeout(function() {buttons.style.display = 'flex';}, (6000 * skipdialog));
 }
 
 function secretdialogue() {
@@ -36,7 +38,7 @@ function secretdialogue() {
 	setTimeout(function() {document.getElementById('text').innerHTML= "And no, I won't tell you how many I have hidden in this game :)";}, 6500);
 
 	buttons.style.display = 'none';
-	setTimeout(function() {buttons.style.display = 'flex';}, 6000);
+	setTimeout(function() {buttons.style.display = 'flex';}, (6000 * skipdialog));
 }
 
 function dialogue1() {
@@ -45,7 +47,7 @@ function dialogue1() {
 	dialogues["dialogue1"] = true;
 
 	buttons.style.display = 'none';
-	setTimeout(function() {buttons.style.display = 'flex';}, 3000);
+	setTimeout(function() {buttons.style.display = 'flex';}, (3000 * skipdialog));
 }
 
 function dialogue2() {
@@ -58,7 +60,7 @@ function dialogue3() {
 	dialogues["dialogue3"] = true;
 
 	buttons.style.display = 'none';
-	setTimeout(function() {buttons.style.display = 'flex';}, 3000);
+	setTimeout(function() {buttons.style.display = 'flex';}, (3000 * skipdialog));
 }
 
 function dialogue4() {
@@ -88,7 +90,7 @@ function dialogue9() {
 	dialogues["market"] = true;
 
 	buttons.style.display = 'none';
-	setTimeout(function() {buttons.style.display = 'flex';}, 3000);
+	setTimeout(function() {buttons.style.display = 'flex';}, (3000 * skipdialog));
 }
 
 function dialoguemarket() {
@@ -106,7 +108,7 @@ function kingdialogue() {
 	setTimeout(function() {createsword();}, 18000);
 
 	buttons.style.display = 'none';
-	setTimeout(function() {buttons.style.display = 'flex';}, 22500);
+	setTimeout(function() {buttons.style.display = 'flex';}, (22500 * skipdialog));
 	document.getElementById("kingdialogue").style.display = 'none';
 	dialogues['kingdialogue'] = true;
 
@@ -118,18 +120,18 @@ function dialogue10() {
 	setTimeout(function() {document.getElementById('text').innerHTML= "You obviously didn't have a choice and came to help the fight, you are still on your way there.";}, 4000);
 	dialogues["towar"] = true;
 	buttons.style.display = 'none';
-	setTimeout(function() {buttons.style.display = 'flex';}, 4000);	 
+	setTimeout(function() {buttons.style.display = 'flex';}, (4000 * skipdialog));	 
 }
 
 function dialogue11() {
 	setTimeout(function() {document.getElementById('text').innerHTML= "You are now in the middle of the war, as you are fighting you hear someone scream";}, 1);
 	setTimeout(function() {document.getElementById('text').innerHTML= "Our king is dead! Our king is dead!! Retreat!!";}, 4000);
 	setTimeout(function() {document.getElementById('text').innerHTML= "You are now the <b>King<b>!";}, 7500);
-
+	dialogues["warover"] = true;
 	document.getElementById('aggro').style.display = "none";
 	document.getElementById('defend').style.display = "none";
 	buttons.style.display = 'none';
-	setTimeout(function() {buttons.style.display = 'flex';}, 7500);
+	setTimeout(function() {buttons.style.display = 'flex';}, (7500 * skipdialog));
 	currentrank = Ranks.KING
 }
 
@@ -159,5 +161,8 @@ function dialogue14() {
 function emptydialogue() {
 	setTimeout(function() {document.getElementById('text').innerHTML= "";}, 1);
 }
-introduction();
 
+function warover() {
+	setTimeout(function() {document.getElementById('text').innerHTML= "The war is already over, you can return home safely now.";}, 1);
+}
+introduction();
