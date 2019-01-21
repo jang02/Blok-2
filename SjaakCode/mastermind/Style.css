@@ -1,0 +1,81 @@
+body {
+	display: grid;
+	grid-template-columns: 42px auto;
+	grid-gap: 25px;
+}
+
+#ColorDot1 {
+	background-image: url("img/AquaCircle.png");
+}
+
+#ColorDot2 {
+	background-image: url("img/BlueCircle.png");
+}
+
+#ColorDot3 {
+	background-image: url("img/GreenCircle.png");
+}
+
+#ColorDot4 {
+	background-image: url("img/PurpleCircle.png");
+}
+
+#ColorDot5 {
+	background-image: url("img/RedCircle.png");
+}
+
+#ColorDot6 {
+	background-image: url("img/YellowCircle.png");
+}
+
+#ColorDot1, #ColorDot2, #ColorDot3, #ColorDot4, #ColorDot5, #ColorDot6{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 10px 5px;
+}
+
+#ColorPicker {
+	width: 42px;
+	height: 325px;
+	border: solid black 2px;
+	grid-column: 1/2;
+}
+
+#GameContainer {
+	border: solid black 5px;
+	display: grid;
+	grid-template-areas: 
+	'chance1'
+	'chance2'
+	'chance3'
+	'chance4'
+	width: 260px;
+	margin: 0 auto;
+}
+
+#chance1 {
+	width: 260px;
+	height: 30px;
+	grid-template-areas: chance1;
+	display: inline-block;
+}
+
+#chance2 {
+	width: 260px;
+	height: 30px;
+	grid-template-areas: chance2;
+}
+
+#chance3 {
+	width: 260px;
+	height: 30px;
+	grid-template-areas: chance3;
+}
+
+.whitecircle {
+	background-image: "url(img/RedCircle.png)";
+	width: 30px;
+	height: 30px;
+	margin: 10px 5px;
+}
