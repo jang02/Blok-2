@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>Responsive website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<p id="dropdownbutton" onclick="myFunction()" class="dropbtn"><i class="fas fa-bars"></i></p>
+			<ul id="myDropdown" class="dropdown-content">
+				<li><i class="fas fa-phone"></i> (06) --- --- --</li>
+				<li><i class="fab fa-whatsapp"></i> (06) --- --- --</li>
+				<li><i class="far fa-clock"></i> Ma - Zo: 8:00 - 22:00</li>
+				<li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+				<li>
+					<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+					<a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.twitter.com"><i class="fab fa-twitter-square"></i></a>
+				</li>
+			</ul>
+		</div>
+		<div id="navbar">
+			<img src="logo.png" id="logo" alt="logo">
+			<p id="navdropdown" onclick="myNavFunction()" class="dropbtn"><i class="fas fa-bars"></i></p>
+			<ul id="myNavdrop" class="dropdown-content">
+				<li class="navbarcenter">
+					<p id="indropbutton1" onclick="indrop1()">test <i class="fas fa-sort-down"></i></p>
+					<ul class="dropdown-content" id="indrop1">
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+					</ul>
+				</li>
+				<li class="navbarcenter">
+					<p id="indropbutton2" onclick="indrop2()">test <i class="fas fa-sort-down"></i></p>
+					<ul class="dropdown-content" id="indrop2">
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+					</ul>
+				</li>
+				<li class="navbarcenter">test</li>
+				<li class="navbarcenter">test</li>
+				<li class="navbarcenter">test</li>
+			</ul>
+		</div>
+		<div id="banner">
+			<img src="header.jpg" alt="header" id="bannerimg">
+			<div id="bannertekst">
+				<h1 class="bannertext" id="bannerH">Basiskopje</h1><br>
+				<p class="bannertext" id="bannerP">info text omdat het kan.</p>
+			</div>
+		</div>
+		<div id="text1" class="text">
+			<h1>Lorem Ipsum</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+			<button id="textbutton">GRATIS testbutton</button>
+		</div>
+		<div id="text2" class="text">
+			<h1>Lorem Ipsum</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+		</div>
+		<div id="text3" class="text">
+			<h1>Lorem Ipsum</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+		</div>
+		<iframe width="420" height="315" id="video"
+				src="https://www.youtube.com/embed/tgbNymZ7vqY">
+		</iframe>
+		<div id="footer">
+			<p>&copy; Jan Garretsen - 2019. All rights reserved.</p>
+		</div>
+	</div>
+	<script src="responsive.js"></script>
+</body>
+</html>

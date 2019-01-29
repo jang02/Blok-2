@@ -1,0 +1,254 @@
+/*GENERAL CSS*/
+body {
+    background-color: gray;
+}
+#container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#header {
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#menu {
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+ul {
+    background-color: #36b2d8;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    margin: 5px 0px 50px 0px;
+}
+
+li {
+    background-color: #d3721d;
+    display: inline-block;
+    margin: 0px 20px;
+    padding: 15px;
+}
+
+li:hover {
+    background-color: white;
+}
+
+a {
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+#footer {
+    text-align: center;
+    background-color: #36b2d8;
+
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+
+.headtext {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 24px;
+}
+
+.standarttext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+
+/*PAGE 1 CSS*/
+
+#cda {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#vvd {
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+    margin: auto 0px;
+}
+
+#d66 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+#pvda {
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    grid-row-start: 5;
+    grid-row-end: 7;
+
+    margin: auto 0px;
+}
+
+#vvd, #cda {
+    display: inline-block;
+}
+
+
+/*PAGE 2 CSS*/
+
+#kopje1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    text-align: center;
+    background-color: #36b2d8;
+}
+
+#kopje2 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    text-align: center;
+    background-color: #d3721d;
+}
+
+
+
+/*PAGE 3 CSS*/
+
+#klaas {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#janremco {
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#bas {
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#sophie {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+#dilju {
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+#ockje {
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+
+/*PAGE 4 CSS*/
+
+
+#stemwijzer {
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 3;
+    grid-row-end: 7;
+}
+
+#buttons {
+    text-align: center;
+}
+.center {
+    display: inline-block;
+}
+
+.green {
+    background-color: green;
+}
+
+#stelling, #finished {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

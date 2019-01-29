@@ -1,0 +1,288 @@
+body {
+ 	font-family: Archivo;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: black;
+}
+
+#container {
+ 	display: grid;
+ 	grid-template-areas: 
+ 	'header'
+ 	'navbar'
+ 	'banner'
+ 	'proefles'
+ 	'locaties'
+ 	'rijlessen'
+ 	'video'
+ 	'footer';
+}
+
+#dropdownbutton, #navdropdown {
+	margin-left: 5%;
+	font-size: 150%;
+	width: 26px;
+}
+
+#dropdownbutton:hover, #navdropdown:hover {
+	cursor: pointer;
+}
+
+#navdropdown {
+	display: inline-block;
+	position: relative;
+	float: left;
+}
+
+#header {
+ 	background-color: aqua;
+ 	width: 100%;
+ 	grid-area: header; 
+ 	position: relative;
+}
+
+#bannerimg {
+	width: 100%;
+}
+
+#navbar {
+	grid-area: navbar;
+	background-color: #a7cece;
+	padding-bottom: 3%;
+	position: relative;
+}
+
+#indrop1, #indrop2 {
+	position: relative;
+}
+
+#logo {
+	margin-top: 10px;
+	margin-left: 50%;
+	height: 50px;
+	width: 50px;
+}
+
+#banner {
+	grid-area: banner;
+	display: inline-block;
+	text-align: center;
+}
+
+.bannertext {
+	display: none;
+}
+
+#text1 {
+	max-width: 250px;
+	grid-area: proefles;
+	margin: 0px auto;
+}
+
+#textbutton {
+	width: 75%;
+	border: none;
+	background-color: yellow;
+	padding: 15px;
+}
+
+#textbutton:hover {
+	cursor: pointer;
+}
+
+#text2 {
+	max-width: 250px;
+	grid-area: locaties;
+	margin: 0px auto;
+}
+#text3 {
+	max-width: 250px;
+	grid-area: rijlessen;
+	margin: 0px auto;
+}
+.text {
+	width: 80%;
+	text-align: left;
+}
+
+.text > h1 {
+	border-bottom: gray solid 1px;
+	width: 100%;
+}
+
+#video {
+	margin: 0px auto;
+	grid-area: video;
+}
+
+ul#myDropdown, ul#myDropdown > li {
+	background-color: aqua;
+}
+ul#myDropdown {
+	margin: 0px;
+	width: 100%;
+	padding: 0px;
+}
+ul#myNavdrop {
+	margin: 0px;
+	width: 100%;
+	padding: 0px;
+}
+ul#myNavdrop, ul#myNavdrop > li {
+	background-color: #a7cece;
+}
+
+ul#myNavdrop > li {
+	text-align: left !important;
+}
+
+
+body {
+    background-color: #d9fafa;
+}
+
+.dropdown-content {
+  display: none;
+  text-align: left;
+}
+
+.show {
+	display: block;
+	position: absolute;
+	z-index: 1;
+}
+
+#footer {
+	grid-area: footer;
+	width: 100%;
+	padding: 15px 0px;
+	margin-top: 10px;
+	text-align: center;
+	background-color: aqua;
+}
+
+
+@media only screen and (min-width: 720px) {
+
+    #container {
+    	display: grid;
+        grid-template-areas: 
+        'header header header'
+        'navbar navbar navbar'
+        'banner banner banner'
+        'proefles locaties rijlessen'
+        'video video video'
+        'footer footer footer';
+    }
+
+    #dropdownbutton, #navdropdown {
+    	display: none;
+    }
+
+    #myNavdrop {
+    	display: inline-block;
+    }
+
+	#myDropdown {
+		display: inline-block;
+	}
+	.show {
+		position: relative;
+	}
+
+	#header {
+		text-align: center;
+	}
+	#bannerimg {
+		display: none;
+	}
+
+	#navbar {
+		text-align: center;
+		padding: 0%;
+	}
+
+	#logo {
+		margin-top: 15px;
+		margin-left: 0px;
+		height: 70px;
+		width: 70px;
+	}
+
+	#banner, #bannerimg {
+		width: 100%;
+	}
+	#bannerH {
+		font-size: 20px;
+		display: inline-block;
+		margin-top: 25%;
+	}
+
+	#bannerP {
+		font-size: 12px;
+		display: inline-block;
+	}
+	#bannerH, #bannerP {
+		font-size: 2em;
+	}
+	.bannertext {
+		background-color: aqua;
+	}
+
+	#bannertekst {
+		position: relative;
+		background-image: url('header.jpg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		height: 780px;
+		/*top: 50%;*/
+	}
+
+	#video {
+		margin-top: 50px;
+		width: 680px;
+		height: 480px;
+	}
+
+	#footer {
+		margin-top: 50px;
+	}
+	
+	ul#myDropdown {
+		text-align: center;
+		margin: 10px;
+		width: 95%;
+	}
+	ul#myNavdrop {
+		text-align: center;
+		margin: 10px;
+		width: 65%;
+		bottom: 15%;
+	}
+
+    li {
+ 		display: inline-block;
+ 		margin: 0px 40px;
+	}
+	
+	#indropbutton1, #indropbutton2 {
+		position: relative;
+	}
+
+	#indrop1, #indrop2 {
+		position: absolute;
+	}
+
+	#indrop1 > li, #indrop2 > li {
+		display: block;
+		background-color: #a7cece;
+		padding: 5px 15px;
+		margin: 0px;
+	}
+
+}

@@ -55,7 +55,7 @@ function check() {
 	if (!win) {
 		guessedArray = ["","","","",""];
 		console.log(document.getElementById("input").value);
-		var guessedword = document.getElementById("input").value;
+		var guessedword = document.getElementById("input").value.toLowerCase();
 		for (let i = 0; i < guessedword.length; i++) {
 			guessedArray[i] = guessedword.charAt(i);
 		}
