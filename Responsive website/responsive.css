@@ -40,7 +40,7 @@ a {
 }
 
 #header {
- 	background-color: aqua;
+ 	background-color: yellow;
  	width: 100%;
  	grid-area: header; 
  	position: relative;
@@ -52,20 +52,19 @@ a {
 
 #navbar {
 	grid-area: navbar;
-	background-color: #a7cece;
-	padding-bottom: 3%;
 	position: relative;
 }
 
 #indrop1, #indrop2 {
 	position: relative;
+	margin-left: 25%;
 }
 
 #logo {
 	margin-top: 10px;
 	margin-left: 50%;
-	height: 50px;
-	width: 50px;
+	height: 75px;
+	width: 200px;
 }
 
 #banner {
@@ -81,7 +80,7 @@ a {
 #text1 {
 	max-width: 250px;
 	grid-area: proefles;
-	margin: 0px auto;
+	margin: 5% auto;
 }
 
 #textbutton {
@@ -98,12 +97,12 @@ a {
 #text2 {
 	max-width: 250px;
 	grid-area: locaties;
-	margin: 0px auto;
+	margin: 5% auto;
 }
 #text3 {
 	max-width: 250px;
 	grid-area: rijlessen;
-	margin: 0px auto;
+	margin: 5% auto;
 }
 .text {
 	width: 80%;
@@ -115,13 +114,15 @@ a {
 	width: 100%;
 }
 
-#video {
-	margin: 0px auto;
+iframe {
+	width: 64vw;
+	height: 36vw;
 	grid-area: video;
+	margin: 0px auto;
 }
 
 ul#myDropdown, ul#myDropdown > li {
-	background-color: aqua;
+	background-color: yellow;
 }
 ul#myDropdown {
 	margin: 0px;
@@ -133,17 +134,9 @@ ul#myNavdrop {
 	width: 100%;
 	padding: 0px;
 }
-ul#myNavdrop, ul#myNavdrop > li {
-	background-color: #a7cece;
-}
 
 ul#myNavdrop > li {
 	text-align: left !important;
-}
-
-
-body {
-    background-color: #d9fafa;
 }
 
 .dropdown-content {
@@ -153,7 +146,7 @@ body {
 
 .show {
 	display: block;
-	position: absolute;
+	position: relative;
 	z-index: 1;
 }
 
@@ -163,7 +156,7 @@ body {
 	padding: 15px 0px;
 	margin-top: 10px;
 	text-align: center;
-	background-color: aqua;
+	background-color: yellow;
 }
 
 
@@ -210,9 +203,7 @@ body {
 	#logo {
 		margin-top: 15px;
 		margin-left: 0px;
-		height: 70px;
-		width: 70px;
-	}
+}
 
 	#banner, #bannerimg {
 		width: 100%;
@@ -231,7 +222,7 @@ body {
 		font-size: 2em;
 	}
 	.bannertext {
-		background-color: aqua;
+		background-color: yellow;
 	}
 
 	#bannertekst {
@@ -239,14 +230,12 @@ body {
 		background-image: url('header.jpg');
 		background-repeat: no-repeat;
 		background-size: 100%;
-		height: 780px;
+		height: 880px;
 		/*top: 50%;*/
 	}
 
 	#video {
 		margin-top: 50px;
-		width: 680px;
-		height: 480px;
 	}
 
 	#footer {
@@ -276,11 +265,12 @@ body {
 
 	#indrop1, #indrop2 {
 		position: absolute;
+		margin-left: 5%;
 	}
 
 	#indrop1 > li, #indrop2 > li {
 		display: block;
-		background-color: #a7cece;
+		background-color: white;
 		padding: 5px 15px;
 		margin: 0px;
 	}
