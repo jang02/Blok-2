@@ -101,6 +101,27 @@ function check() {
 			button.innerHTML = "Restart";
 
 			document.getElementById('gamecontainer').appendChild(button);
+
+            for (let i = 1; i <= 1; i++){
+                var row = document.createElement("DIV");
+                row.id = "row" + i;
+                document.getElementById("gamecontainer").appendChild(row);
+                for (var o = 1; o <= 5; o++){
+                    var block = document.createElement("DIV");
+                    block.id = i + "-" + o;
+                    block.style.backgroundColor = 'green';
+                    block.classList.add("playboard");
+                    document.getElementById("row" + i).appendChild(block);
+
+                    var p = document.createElement("P");
+                    p.id = "row" + i + "-" + "col" + o;
+                    document.getElementById(i + "-" + o).appendChild(p);
+                }
+            }
+
+            for (var i = 0; i < 5; i++) {
+            	document.getElementById('row1-col' + (i + 1)).innerHTML = letterArray[i];
+			}
 		}
 		else {
 			var k = 0;
@@ -124,5 +145,11 @@ function reset() {
 	document.getElementById('inputcontainer').innerHTML = "";
 	console.log('reset gamecontainer.');
 }
+
+document.addEventListener('keydown', function(event){
+    if(event.keyCode === 13) {
+    	check();
+	}
+} );
 
 creategame();

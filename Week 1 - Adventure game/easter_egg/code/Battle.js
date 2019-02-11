@@ -205,7 +205,6 @@ var Battle = function (oldLevel, enemy) {
 
             let damage = Math.ceil((Math.sqrt((-(1.0 / width) * Math.pow(x, 2) + x) - Math.abs(Math.sin((x * 2) / (width / Math.PI)) * 100)) * 100 / Math.sqrt(Math.pow(enemy.defenceStat, 1.75))) * (Math.pow(attackTimes++ / 10, 2) + 0.99));
 
-            damage = damage * 1000;
             local.finalAttack(damage, runnableId);
         }).createButton();
 
