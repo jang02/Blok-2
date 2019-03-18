@@ -9,28 +9,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lingo/lingo.js">
+        <entry file="file://$PROJECT_DIR$/Week 1 - Adventure game/css/adventure_game.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="111" column="58" selection-start-line="111" selection-start-column="58" selection-end-line="111" selection-end-column="58" />
+            <state relative-caret-position="765">
+              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week 1 - Adventure game/JS/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1530">
+              <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lingo/animewords.js">
+        <entry file="file://$PROJECT_DIR$/toets/praktijktoets-stemwijzer/js/stemwijzer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lingo/lingo.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -74,7 +80,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,18 +90,59 @@
             <path>
               <item name="Blok 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blok 2" type="462c0819:PsiDirectoryNode" />
-              <item name="Lingo" type="462c0819:PsiDirectoryNode" />
+              <item name="Extra" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blok 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blok 2" type="462c0819:PsiDirectoryNode" />
+              <item name="Extra" type="462c0819:PsiDirectoryNode" />
+              <item name="03_defuse_bomb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blok 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blok 2" type="462c0819:PsiDirectoryNode" />
+              <item name="JS toets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blok 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blok 2" type="462c0819:PsiDirectoryNode" />
+              <item name="toets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blok 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blok 2" type="462c0819:PsiDirectoryNode" />
+              <item name="toets" type="462c0819:PsiDirectoryNode" />
+              <item name="praktijktoets-stemwijzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blok 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blok 2" type="462c0819:PsiDirectoryNode" />
+              <item name="toets" type="462c0819:PsiDirectoryNode" />
+              <item name="praktijktoets-stemwijzer" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blok 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blok 2" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 1 - Adventure game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blok 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blok 2" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 1 - Adventure game" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Open dag" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Blok 3" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -129,16 +175,24 @@
       <workItem from="1548838918938" duration="4925000" />
       <workItem from="1549025195971" duration="56000" />
       <workItem from="1549459131167" duration="1427000" />
+      <workItem from="1549872949156" duration="513000" />
+      <workItem from="1549884779903" duration="11000" />
+      <workItem from="1549885098313" duration="717000" />
+      <workItem from="1549876143811" duration="247000" />
+      <workItem from="1550054902233" duration="838000" />
+      <workItem from="1550137507845" duration="17000" />
+      <workItem from="1550154984316" duration="35000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34407000" />
+    <option name="totallyTimeSpent" value="36785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1977612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -192,13 +246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Week 1 - Adventure game/JS/levels.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3638">
-          <caret line="214" column="4" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Week 1 - Adventure game/JS/buttons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -213,17 +260,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Week 1 - Adventure game/JS/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Week 1 - Adventure game/JS/dialogues.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lingo/lingo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="111" column="58" selection-start-line="111" selection-start-column="58" selection-end-line="111" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lingo/animewords.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lingo/lingo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Responsive website/responsive.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Extra/03_defuse_bomb/bomb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -234,20 +305,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lingo/lingo.js">
+    <entry file="file://$PROJECT_DIR$/Week 1 - Adventure game/JS/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="111" column="58" selection-start-line="111" selection-start-column="58" selection-end-line="111" selection-end-column="58" />
+        <state relative-caret-position="1530">
+          <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lingo/lingo.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lingo/animewords.js">
+    <entry file="file://$PROJECT_DIR$/Week 1 - Adventure game/JS/levels.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="527">
+          <caret line="214" column="4" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toets/praktijktoets-stemwijzer/js/stemwijzer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
